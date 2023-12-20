@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Recommended so that CleverTap knows when to attempt a network call -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <application
@@ -14,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiPushCT"
         android:name=".MiPush"
-        tools:targetApi="31">
+        tools:targetApi="33">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -27,6 +28,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".NativeDisplayActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="CLEVERTAP_XIAOMI_APP_KEY"
             android:value="@string/xiaomi_app_key" />
@@ -37,17 +42,17 @@
 
     <meta-data
         android:name="CLEVERTAP_ACCOUNT_ID"
-        android:value="TEST-4WK-6WZ-Z76Z" />
+        android:value="WR7-899-766Z" />
 
         <meta-data
             android:name="CLEVERTAP_TOKEN"
-            android:value="TEST-106-304"/>
+            android:value="ccb-a20"/>
         <meta-data
             android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
             android:value="1"/>
         <meta-data
             android:name="CLEVERTAP_REGION"
-            android:value="us1" />
+            android:value="eu1" />
     </application>
 
 </manifest>
